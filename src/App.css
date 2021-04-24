@@ -53,5 +53,28 @@ tr {
 }
 
 .card {
-  width: 18rem;
+  display: flex;
+  flex-direction: column;
+}
+.card-body {
+  display: flex;
+}
+.button {
+  display: flex;
+  justify-content: center;
+}
+.text {
+  display: flex;
+  text-align: center;
+}
+.cityName {
+  display: flex;
+  justify-content: center;
+}
+.image {
+  justify-content: center;
+}
+.tableHeaders {
+  display: flex;
+  justify-content: center;
 }
