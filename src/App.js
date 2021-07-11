@@ -7,6 +7,7 @@ import Heading from "./Heading";
 
 import TouristInfoCards from "./TouristInfoCards";
 
+import Restaurant from "./Restaurant";
 import Footer from "./Footer";
 import SearchResults from "./SearchResults";
 
@@ -16,6 +17,7 @@ const App = () => {
       <Heading />
       <TouristInfoCards />
       <Bookings />
+      <Restaurant />
       <SearchResults />
       <Footer
         const

@@ -1,5 +1,6 @@
 import React from "react";
 import fakeBookings from "./data/fakeBookings.json";
+import moment from "moment";
 
 console.log("This is fakeBookings", fakeBookings);
 const a = moment(fakeBookings["checkOutDate"]);
@@ -23,6 +24,10 @@ const SearchResults = () => {
         </thead>
         <tbody>
           {fakeBookings.map((data, key) => {
+            // Installed 'Moment' in order to calculate the 'Night Stayed' Value
+            var a = moment(data["checkInDate"], "YYYY/M/D");
+            var b = moment(data["checkOutDate"], "YYYY/M/D");
+            var diffDays = b.diff(a, "days");
             return (
               <tr key={key}>
                 <th scope="col, row">{data["id"]}</th>
@@ -33,7 +38,7 @@ const SearchResults = () => {
                 <td>{data["roomId"]}</td>
                 <td>{data["checkInDate"]}</td>
                 <td>{data["checkOutDate"]}</td>
-                <td>{a.diff(b, "days")}</td>
+                <td>{diffDays}</td>
               </tr>
             );
           })}
