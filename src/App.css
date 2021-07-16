@@ -41,6 +41,10 @@
 
 tr {
   color: #5b5757;
+  background-color: white;
+}
+.tr-active {
+  background-color: red;
 }
 
 .results {
@@ -77,4 +81,11 @@ tr {
 .tableHeaders {
   display: flex;
   justify-content: center;
+}
+
+.highlighted {
+  background-color: aqua;
+}
+.unhighlighted {
+  background-color: white;
 }
